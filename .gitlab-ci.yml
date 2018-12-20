@@ -10,6 +10,14 @@ unittest-py34:
     - tox -e py34
   tags:
     - python3.4
+    
+unittest-py27:
+  stage: test
+  script:
+    - pip install tox
+    - tox -e py34
+  tags:
+    - python2.7    
    
 docker-deploy:
   stage: deploy
